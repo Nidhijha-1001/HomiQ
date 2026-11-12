@@ -1,0 +1,56 @@
+{
+  "dataset": {
+    "name": "Bengaluru House Price Data",
+    "source": "Kaggle dataset 20710 by AmitabhaChakraborty",
+    "source_url": "https://www.kaggle.com/datasets/amitabhajoy/bengaluru-house-price-data",
+    "license": "CC0: Public Domain",
+    "geographic_scope": "Bengaluru, India",
+    "rows_after_target_cleanup": 12598,
+    "duplicate_rows_removed": 692,
+    "test_size": 0.2,
+    "random_state": 42,
+    "target_unit": "INR"
+  },
+  "cross_validation": {
+    "folds": 5,
+    "baseline": {
+      "rmse": 13700747.114840835,
+      "mae": 5823088.445671934,
+      "r2": 0.19341415826619565
+    },
+    "improved": {
+      "rmse": 13202085.464294843,
+      "mae": 5614853.001702607,
+      "r2": 0.25177449742713803
+    },
+    "target_unit": "INR",
+    "selection_metric": "mean five-fold R-squared on training data"
+  },
+  "selected_model": "improved",
+  "features": [
+    "total_sqft",
+    "bhk",
+    "bath",
+    "balcony",
+    "location",
+    "area_type"
+  ],
+  "test": {
+    "mse": 158231370234584.62,
+    "rmse": 12579005.136917014,
+    "mae": 5560409.784218797,
+    "r2": 0.25944425592289855
+  },
+  "target_unit": "INR",
+  "display_exchange_rate": {
+    "usd_per_inr": 0.010673,
+    "rate_date": "2026-11-11",
+    "source": "Frankfurter"
+  },
+  "top_numeric_correlations_with_listed_price": {
+    "bath": 0.45158838919251193,
+    "bhk": 0.39360344699843164,
+    "balcony": 0.11642069913707932,
+    "total_sqft": 0.04829766005306048
+  }
+}
